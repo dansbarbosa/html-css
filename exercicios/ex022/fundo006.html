@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fundo Fixo de Tela</title>
     <style>
+
+        /* 
+        Da pra aplicar o size no shorthand sim, clã. Tem que fazer desse jeito:  color > image > position > / > size > repeat > attachment. 
+
+        Exemplo:
+        background: #000 url('imagem.jpg') center top/cover no-repeat fixed;
+        */
         body {
             height: 97vh;
-            background-color: black;
-            background-image: url('imagens/wallpaper002.jpg');
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
+            background: black url('imagens/wallpaper002.jpg') center center/cover no-repeat fixed;
         }
 
         main {
             background-color: white;
-            width: 400px;
+            max-width: 400px;
             padding: 10px;
             margin: auto;
             margin-top: 5px;
@@ -41,7 +44,8 @@
 <body>
     <main>
         <h1>Teste de Imagem de Fundo</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cupiditate architecto mollitia! Natus voluptatum consequatur recusandae aliquid cupiditate perferendis ullam et, harum nisi, facere ab neque adipisci? Accusamus, placeat molestias.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cupiditate architecto mollitia! Natus voluptatum consequatur recusandae aliquid cupiditate perferendis ullam et, harum nisi, facere ab neque adipisci? Accusamus, placeat molestias. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi saepe neque ipsa dicta minus facilis nesciunt animi ab consectetur alias quisquam vel voluptas illo velit ducimus quos laborum, placeat quae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam obcaecati explicabo nemo praesentium, veritatis repellendus saepe reprehenderit recusandae nisi quas id eos deserunt animi expedita suscipit repudiandae nulla accusantium reiciendis? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id necessitatibus nulla ea ipsam? Distinctio, natus molestias fuga unde facere esse, necessitatibus aliquid quae ducimus corrupti possimus, maiores dolorum mollitia et! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt voluptatum, ab similique fugit soluta impedit aut accusamus neque mollitia sequi earum labore animi quam optio numquam tempore eum natus odit?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus praesentium fuga eius quod culpa quia! Quaerat, voluptatibus dicta eos ex iste nemo ullam voluptate in ad quam quas cum impedit! Ex aliquam voluptates ducimus accusantium sapiente vitae velit dolores, aperiam nemo earum sequi error rem, qui facilis aliquid reprehenderit incidunt.</p>
     </main>
 </body>
 </html>
