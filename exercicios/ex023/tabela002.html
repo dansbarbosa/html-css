@@ -13,6 +13,7 @@
             width: 400px;
             border-collapse: collapse;
             text-align: center;
+            position: relative;
         }
 
         td, th {
@@ -20,21 +21,44 @@
             padding: 5px;
         }
 
+        caption {
+            font-size: 1em;
+            font-weight: bold;
+            padding: 5px;
+            background-color: lightgray;
+            border-top: 1px solid black;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+        }
+
         thead {
             background-color: #EAECF0;
             color: black;
+            position: sticky; /* Tag para fixar o cabeçalho quando você rola a página para baixo */
+            top: -1px;
         }
 
         th.posiçao {
             width: 100px;
         }
 
-        td {
-            background-color: #F8F9FA;
+        /* --LEMBRE-SE:
+
+        Usar a pseudo-classe :nth-child( )
+
+        - Para linhas pares usar (even) ou (2n);
+        - Para linhas ímpares usar (odd) ou (2n-1). */
+
+        tbody > tr:nth-child(2n-1) {
+            background-color: lightgray;
         }
 
         td:nth-child(3) { 
             text-align: right;
+        }
+
+        tfoot th {
+            background-color: #EAECF0;
         }
 
     </style>
@@ -44,6 +68,7 @@
     <!-- 
         Anatomia para tabelas grandes
         Table
+            caption
             thead
                 tr, td, th
             tbody
@@ -52,11 +77,12 @@
                 tr, td th
     -->
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th class="posiçao">Posição</th>
-                <th>Estado</th>
-                <th>População</th>
+                <th class="posiçao" scope="col">Posição</th>
+                <th scope="col">Estado</th>
+                <th scope="col">População</th>
             </tr>
         </thead>
         <tbody>
@@ -89,10 +115,11 @@
         <tfoot>
             <tr>
                 <td></td>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="num"><strong>115.327.796</strong></td>
             </tr>
         </tfoot>
     </table>
+    
 </body>
 </html>
